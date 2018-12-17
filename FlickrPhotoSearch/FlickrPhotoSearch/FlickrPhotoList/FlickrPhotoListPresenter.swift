@@ -25,7 +25,24 @@ class FlickrPhotoListPresenter : FlickrPhotoListPresenterProtocol {
     }
     
     func doFlickrImageSearchFor(searchQuery query:String) {
+         UserDefaults.standard.set(1, forKey: "page")
         interactor?.fetchPhotosForSearchQuery(query: query)
+    }
+    
+    func doMoreFlickrImageSearchFor(searchQuery query: String) {
+       
+        setPageNumberToFetchFreshQueries()
+        interactor?.fetchPhotosForSearchQuery(query: query)
+    }
+    
+    fileprivate func setPageNumberToFetchFreshQueries() {
+        var currentPageNo : Int = UserDefaults.standard.integer(forKey: "page")
+        currentPageNo = currentPageNo + 1
+        
+        let totalPageNumber : Int = UserDefaults.standard.integer(forKey: "pages")
+        if(currentPageNo < totalPageNumber) {
+            UserDefaults.standard.set(currentPageNo, forKey: "page")
+        }
     }
 
     

@@ -39,6 +39,8 @@ struct Constants {
         static let FLICKR_SEARCH_TEXT_KEY = "text"
         static let FLICKR_SEARCH_PER_PAGE_KEY = "per_page"
         static let FLICKR_SEARCH_PER_PAGE_VALUE = "21"
+        static let FLICKR_SEARCH_PAGE_NUMBER_KEY = "page"
+    
     }
     
     struct FlickrImageSearchConstants {

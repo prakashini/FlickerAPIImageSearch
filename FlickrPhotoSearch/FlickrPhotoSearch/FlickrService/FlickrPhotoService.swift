@@ -38,6 +38,10 @@ public class FlickerPhotoService : APIResource {
             }
             
             let photoObj  = jsonObj["photos"] as? [String : AnyObject]
+           
+            let photoParentObj = FlickrPhotoParent(photoObj!)
+            photoParentObj.storePageDetailsToUserDefaults()
+           
             let photoArrObj = photoObj!["photo"] as? [AnyObject]
             for photo in photoArrObj!  {
                     let flickrPhotoObj = FlickrPhoto.init(photo as! [String : Any])

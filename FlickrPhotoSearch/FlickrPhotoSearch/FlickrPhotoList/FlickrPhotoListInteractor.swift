@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class FlickrPhotoListInteractor : FlickrPhotoListInteractorInputProtocol {
+        
     var interactor: FlickrPhotoListInteractorOutputProtocol?
     
     var remoteDataManager: FlickrPhotoListRemoteDataManagerInputProtocol?

@@ -9,16 +9,16 @@
 import Foundation
 
 public struct FlickrPhoto {
-    var flickrPhotoId : String?
-    var flickrPhotoOwner : String?
-    var flickrPhotoSecret: String?
-    var flickrPhotoServer: String?
-    var flickrPhotoFarm:Int?
-    var flickrPhotoTitle : String?
-    var flickrPhotoIsfriend : Bool?
-    var flickrPhotoIsfamily: Bool
+    public var flickrPhotoId : String?
+    public var flickrPhotoOwner : String?
+    public var flickrPhotoSecret: String?
+    public var flickrPhotoServer: String?
+    public var flickrPhotoFarm:Int?
+    public var flickrPhotoTitle : String?
+    public var flickrPhotoIsfriend : Bool?
+    public var flickrPhotoIsfamily: Bool
     
-    init(_ dictionary: [String: Any]) {
+    public init(_ dictionary: [String: Any]) {
         self.flickrPhotoId = dictionary["id"] as? String ?? ""
         self.flickrPhotoOwner = dictionary["owner"] as? String ?? ""
         self.flickrPhotoSecret = dictionary["secret"] as? String ?? ""

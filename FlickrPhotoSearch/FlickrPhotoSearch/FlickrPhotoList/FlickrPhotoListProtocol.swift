@@ -20,6 +20,7 @@ protocol FlickrPhotoListPresenterProtocol:class {
     
     func viewDidLoad()
     func doFlickrImageSearchFor(searchQuery query:String)
+    func doMoreFlickrImageSearchFor(searchQuery query:String)
     func updateView()
 }
 
